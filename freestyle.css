@@ -1,0 +1,159 @@
+/*h1{
+    text-transform: uppercase;
+    color: goldenrod;
+    font-family: cursive;
+    text-shadow: 10px 10px 10px silver;
+    padding: 20px;
+    text-align: center;
+}
+
+h1:hover{
+    color: black;
+    background-color: rgb(124, 221, 229);
+    border-radius: 20px;
+}
+
+section{
+    color: antiquewhite;
+    height: 100vh;
+    width: 80%;
+    
+}
+
+a{
+    height: 100vh;
+    width: 15%;
+    padding: 30px;
+}
+
+iframe{
+    height: 96vh;
+    width: 98%;
+    margin: 15px;
+}
+
+body{
+    color: darkolivegreen;
+}*/
+
+/* Reset basique */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: #1e90ff; /* bleu lumineux */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    padding: 20px;
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-height: calc(100vh - 104px); /* hauteur totale - header/footer */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1e90ff;
+}
+
+/* Section iframe */
+section {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+section iframe {
+    width: 100%;
+    height: 90vh;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(30,144,255,0.3);
+}
+
+/* Footer */
+footer {
+    background: #1e90ff;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Icônes FontAwesome footer */
+footer i {
+    font-size: 1.5rem;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+/* Mise en page générale */
+body {
+    display: flex;
+}
+
+nav + section {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+/* Responsive - navigation en haut sur petits écrans */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        min-height: auto;
+        padding: 10px 0;
+        gap: 20px;
+    }
+    nav a {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+    section iframe {
+        height: 60vh;
+        border-radius: 8px;
+    }
+}
